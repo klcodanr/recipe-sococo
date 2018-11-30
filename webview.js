@@ -3,9 +3,7 @@ import path from 'path';
 module.exports = (Franz) => {
   const getMessages = function getMessages() {
     // get unread messages
-    const count = document.querySelector('#hangout-landing-chat iframe')
-      .contentWindow.document.querySelectorAll('.ee')
-      .length;
+    const count = document.querySelectorAll('.new-messages').length;
 
     // set Franz badge
     Franz.setBadge(count);
