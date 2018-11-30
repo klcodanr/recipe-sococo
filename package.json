@@ -1,13 +1,13 @@
 {
-  "id": "hangouts",
-  "name": "Hangouts",
+  "id": "sococo",
+  "name": "Sococo",
   "version": "1.0.0",
-  "description": "Hangouts",
+  "description": "Sococo for Franz",
   "main": "index.js",
-  "author": "Stefan Malzner <stefan@adlk.io>",
+  "author": "Dan Klco <dan.klco@perficient.com>",
   "license": "MIT",
   "config": {
-    "serviceURL": "https://hangouts.google.com",
+    "serviceURL": "https://app.sococo.com",
     "hasNotificationSound": true
   }
 }
