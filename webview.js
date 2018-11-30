@@ -1,14 +1,12 @@
-import path from 'path';
-
+/* eslint-env node, es6, browser */
 module.exports = (Franz) => {
-  const getMessages = function getMessages() {
-    // get unread messages
-    const count = document.querySelectorAll('.new-messages').length;
-
-    // set Franz badge
-    Franz.setBadge(count);
-  };
-
-  // check for new messages every second and update Franz badge
-  Franz.loop(getMessages);
+    const getMessages = function getMessages() {
+        let indirect = document.querySelectorAll('.new-messages');
+        let direct = 0;
+        document.querySelectorAll('.people-pane .badge').forEach(function(badge){
+            direct += parseInt(badge.innerText,10);
+        });
+        Franz.setBadge(direct, indirect);
+    };
+    Franz.loop(getMessages);
 };
